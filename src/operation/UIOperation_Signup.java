@@ -2,6 +2,7 @@ package operation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import excelExportAndFileIO.setSignupData;
@@ -110,14 +111,15 @@ public class UIOperation_Signup {
         	//Verify 'First Name' text
         	try {
 			boolean text2 =  driver.findElement(By.xpath(mSignupObjects.pageText2)).isDisplayed();
-        	if (text2 == true){
-        		System.out.println("'First Name' text located");
+			boolean field2 =  driver.findElement(By.xpath(mSignupObjects.fstNameField)).isDisplayed();
+        	if (text2 == true && field2 == true){
+        		System.out.println("'First Name' text/ field located");
         		System.out.println("====================");
                 System.out.println("");
         	}
     		} catch (Exception e) {
 	        		msetData.WriteDataFail(6);
-	        		System.out.println("'First Name' text not located");
+	        		System.out.println("'First Name' text/ field not located");
 	        		System.out.println("====================");
 	        		System.out.println("");
 	        		Assert.fail("", e);
@@ -130,14 +132,15 @@ public class UIOperation_Signup {
         	//Verify ''Last Name'' field text 
         	try {
         	boolean text3 =  driver.findElement(By.xpath(mSignupObjects.pageText3)).isDisplayed();
-        	if (text3 == true){
-        		System.out.println("'Last Name' text located");
+        	boolean field3 =  driver.findElement(By.xpath(mSignupObjects.lstNameField)).isDisplayed();
+        	if (text3 == true && field3 == true){
+        		System.out.println("'Last Name' text/ field located");
         		System.out.println("====================");
                 System.out.println("");
         	}
 			} catch (Exception e) {
 	        		msetData.WriteDataFail(7);
-	        		System.out.println("'Last Name' text not located");
+	        		System.out.println("'Last Name' text/ field not located");
 	        		System.out.println("====================");
 	        		System.out.println("");
 	        		Assert.fail("", e);
@@ -147,18 +150,19 @@ public class UIOperation_Signup {
             
             
         case "TXT4":
-        	//Verify WHERE field text 
+        	//Verify EMAIL field text 
         	try {
         	boolean text4 =  driver.findElement(By.xpath(mSignupObjects.pageText4)).isDisplayed();
-        	if (text4 == true){
-        		System.out.println("' city, state or zipcode' text located");
+        	boolean field4 =  driver.findElement(By.xpath(mSignupObjects.emlField)).isDisplayed();
+        	if (text4 == true && field4 == true ){
+        		System.out.println("' city, state or zipcode' text/ field located");
         		System.out.println("====================");
                 System.out.println("");
         	}	
 			} catch (Exception e) {
 
 	        		msetData.WriteDataFail(8);
-	        		System.out.println("' city, state or zipcode' text not located");
+	        		System.out.println("' city, state or zipcode' text/ field not located");
 	        		System.out.println("====================");
 	        		System.out.println("");
 	        		Assert.fail("",e);
@@ -168,17 +172,18 @@ public class UIOperation_Signup {
             
             
         case "TXT5":
-        	//Verify 'Email Address' field text 
+        	//Verify 'ZIP CODE' field text 
         	try {
         	boolean text5 =  driver.findElement(By.xpath(mSignupObjects.pageText5)).isDisplayed();
-        	if (text5 == true){
-        		System.out.println("'Email Address' text located");
+        	boolean field5 =  driver.findElement(By.xpath(mSignupObjects.fstNameField)).isDisplayed();
+        	if (text5 == true && field5 == true){
+        		System.out.println("'Email Address' text/ field located");
         		System.out.println("====================");
                 System.out.println("");
         	}
         	} catch (Exception e) {
             		msetData.WriteDataFail(9);
-            		System.out.println("'Email Address' text not located");
+            		System.out.println("'Email Address' text/ field not located");
             		System.out.println("====================");
             		System.out.println("");
             		Assert.fail("", e);
@@ -187,17 +192,18 @@ public class UIOperation_Signup {
         	
         	
         case "TXT6":
-        	//Verify 'Email Address' field text 
+        	//Verify 'Phone Number' field text 
         	try {
         	boolean text6 =  driver.findElement(By.xpath(mSignupObjects.pageText6)).isDisplayed();
-        	if (text6 == true){
-        		System.out.println("'Phone Number' text located");
+        	boolean field6 =  driver.findElement(By.xpath(mSignupObjects.phoneField)).isDisplayed();
+        	if (text6 == true && field6 == true){
+        		System.out.println("'Phone Number' text/ field located");
         		System.out.println("====================");
                 System.out.println("");
         	}
         	} catch (Exception e) {
             		msetData.WriteDataFail(10);
-            		System.out.println("'Phone Number' text not located");
+            		System.out.println("'Phone Number' text/ field not located");
             		System.out.println("====================");
             		System.out.println("");
             		Assert.fail("", e);
@@ -207,17 +213,18 @@ public class UIOperation_Signup {
         	
         	
         case "TXT7":
-        	//Verify 'Email Address' field text 
+        	//Verify 'Password' field text 
         	try {
         	boolean text7 =  driver.findElement(By.xpath(mSignupObjects.pageText7)).isDisplayed();
-        	if (text7 == true){
-        		System.out.println("'Password' text located");
+        	boolean field7 =  driver.findElement(By.xpath(mSignupObjects.pwdField)).isDisplayed();
+        	if (text7 == true && field7 == true){
+        		System.out.println("'Password' text/ field located");
         		System.out.println("====================");
                 System.out.println("");
         	}
         	} catch (Exception e) {
             		msetData.WriteDataFail(11);
-            		System.out.println("'Password' text not located");
+            		System.out.println("'Password' text/ field not located");
             		System.out.println("====================");
             		System.out.println("");
             		Assert.fail("", e);
@@ -227,17 +234,18 @@ public class UIOperation_Signup {
         	
         	
         case "TXT8":
-        	//Verify 'Email Address' field text 
+        	//Verify 'Confirm Password' field text 
         	try {
         	boolean text8 =  driver.findElement(By.xpath(mSignupObjects.pageText8)).isDisplayed();
-        	if (text8 == true){
-        		System.out.println("'Confirm Password' text located");
+        	boolean field8 =  driver.findElement(By.xpath(mSignupObjects.rePwdField)).isDisplayed();
+        	if (text8 == true && field8 == true){
+        		System.out.println("'Confirm Password' text/ field located");
         		System.out.println("====================");
                 System.out.println("");
         	}
         	} catch (Exception e) {
             		msetData.WriteDataFail(12);
-            		System.out.println("'Confirm Password' text not located");
+            		System.out.println("'Confirm Password' text/ field not located");
             		System.out.println("====================");
             		System.out.println("");
             		Assert.fail("", e);
@@ -246,17 +254,18 @@ public class UIOperation_Signup {
         	
         	
         case "TXT9":
-        	//Verify 'Email Address' field text 
+        	//Verify 'I would like to receive job alerts from OakJobAlerts.com' field text 
         	try {
         	boolean text9 =  driver.findElement(By.xpath(mSignupObjects.pageText9)).isDisplayed();
-        	if (text9 == true){
-        		System.out.println("I would like to receive job alerts from OakJobAlerts.com' text located");
+        	boolean chkbox1 =  driver.findElement(By.xpath(".//*[@id='page-top']/section/div/div/div[1]/form/div[6]/label[1]/input")).isSelected();
+        	if (text9 == true && chkbox1 == true){
+        		System.out.println("I would like to receive job alerts from OakJobAlerts.com' text/ checkbox located");
         		System.out.println("====================");
                 System.out.println("");
         	}
         	} catch (Exception e) {
             		msetData.WriteDataFail(13);
-            		System.out.println("'I would like to receive job alerts from OakJobAlerts.com' text not located");
+            		System.out.println("'I would like to receive job alerts from OakJobAlerts.com' text/ checkbox not located");
             		System.out.println("====================");
             		System.out.println("");
             		Assert.fail("", e);
@@ -265,17 +274,18 @@ public class UIOperation_Signup {
         	
         	
         case "TXT10":
-        	//Verify 'Email Address' field text 
+        	//Verify 'I agree to the Terms of Service and Privacy Policy of this site' field text 
         	try {
         	boolean text10 =  driver.findElement(By.xpath(mSignupObjects.pageText10)).isDisplayed();
-        	if (text10 == true){
-        		System.out.println("'I agree to the Terms of Service and Privacy Policy of this site' text located");
+        	boolean chkbox2 =  driver.findElement(By.xpath(".//*[@id='terms']")).isSelected();
+        	if (text10 == true && chkbox2 == true){
+        		System.out.println("'I agree to the Terms of Service and Privacy Policy of this site' text/ checkbox located");
         		System.out.println("====================");
                 System.out.println("");
         	}
         	} catch (Exception e) {
             		msetData.WriteDataFail(14);
-            		System.out.println("'I agree to the Terms of Service and Privacy Policy of this site' text not located");
+            		System.out.println("'I agree to the Terms of Service and Privacy Policy of this site' text/ checkbox not located");
             		System.out.println("====================");
             		System.out.println("");
             		Assert.fail("", e);
@@ -284,7 +294,7 @@ public class UIOperation_Signup {
         	
         	
         case "TXT11":
-        	//Verify 'Email Address' field text 
+        	//Verify 'Already registered? Click here to login' field text 
         	try {
         	boolean text11 =  driver.findElement(By.xpath(mSignupObjects.pageText11)).isDisplayed();
         	if (text11 == true){
@@ -324,17 +334,19 @@ public class UIOperation_Signup {
             
             
         case "LNK1":
-            //Verify Link on webpage.
+            //Verify Sign-In link on webpage.
         try {
-        	boolean Link1 =  driver.findElement(By.xpath(mSignupObjects.link1)).isDisplayed();
-        	if (Link1 == true){
-        		System.out.println("Terms of Service Link located");
+        	String Link1 =  driver.findElement(By.xpath(mSignupObjects.link1)).getAttribute("href");
+        	System.out.println(Link1);
+        	String ActualLink = "http://oakjobs.com/sign_in.php";
+        	if (Link1.contentEquals(ActualLink)){
+        		System.out.println("Sign-In Link located");
         		System.out.println("====================");
                 System.out.println("");
         	}
         } catch (Exception e) {
         		msetData.WriteDataFail(17);
-        		System.out.println("Terms of Service Link not located");
+        		System.out.println("Sign-In Link not located");
         		System.out.println("====================");
         		System.out.println("");
         		Assert.fail("", e);
@@ -346,20 +358,44 @@ public class UIOperation_Signup {
         case "LNK2":
         	 //Verify Link on webpage.
         	try {
-        	boolean Link2 =  driver.findElement(By.xpath(mSignupObjects.link2)).isDisplayed();
-        	if (Link2 == true){
-        		System.out.println("Privacy Policy Link located");
+        	String Link2 =  driver.findElement(By.xpath(mSignupObjects.link2)).getAttribute("href");
+        	System.out.println(Link2);
+        	String ActualLink = "http://oakjobs.com/termsandservice.php";
+        	if (Link2.contentEquals(ActualLink)){
+        		System.out.println("Terms of Service Link located");
         		System.out.println("====================");
                 System.out.println("");
         	}
         	} catch (Exception e) {
         			msetData.WriteDataFail(18);
-            		System.out.println("Privacy Policy Link not located");
+            		System.out.println("Terms of Service Link not located");
             		System.out.println("====================");
             		System.out.println("");	
             		Assert.fail("", e);
         	}
             break;
+            
+            
+            
+        case "LNK3":
+       	 //Verify Link on webpage.
+       	try {
+       	String Link3 =  driver.findElement(By.xpath(mSignupObjects.link2)).getAttribute("href");
+       	System.out.println(Link3);
+       	String ActualLink = "http://oakjobs.com/privacy.php";
+       	if (Link3.contentEquals(ActualLink) ){
+       		System.out.println("Privacy Policy Link located");
+       		System.out.println("====================");
+               System.out.println("");
+       	}
+       	} catch (Exception e) {
+       			msetData.WriteDataFail(18);
+           		System.out.println("Privacy Policy Link not located");
+           		System.out.println("====================");
+           		System.out.println("");	
+           		Assert.fail("", e);
+       	}
+           break;
             
             
             

@@ -55,7 +55,7 @@ public void afterTest() {
 		driver.quit();
 	}
 			
-/*	
+	
 // Verifies the Home-Page Web-Elements.	
 	@Test (priority= 0)
 	 public void testHomePage() throws Exception {
@@ -86,7 +86,10 @@ public void afterTest() {
 	@Test(priority=1)
 	private void testLoginPage() throws Exception {
 	UIOperation_Login mOperationLogin = new UIOperation_Login(driver);
-		
+	
+	System.out.println("");
+	System.out.println("===================================");
+	
 	//Read Keyword sheet for LoginPage
 	Sheet sheet =	file.ReadExcel("Test Cases_Login");
 	
@@ -101,7 +104,7 @@ public void afterTest() {
 		mOperationLogin.perform_homePage(content);
 		}
 	mSetLoginData.WriteData("PASS");
-	}*/
+	}
 	
 	
 	// Verifies the SignUp Page Web-Elements
@@ -109,6 +112,9 @@ public void afterTest() {
 		private void testSignUpPage() throws Exception {
 		UIOperation_Signup mOperationSignup = new UIOperation_Signup(driver);
 			
+		System.out.println("");
+		System.out.println("===================================");
+		
 		//Read Keyword sheet for LoginPage
 		Sheet sheet =	file.ReadExcel("Test Cases_SignUp");
 		
@@ -120,7 +126,7 @@ public void afterTest() {
 			System.out.println("New Testcase->"+content +" Started");
 			
 			// Call the function to perform the UIoperation
-//			mOperationLogin.perform_homePage(content);
+		mOperationSignup.perform_Signup(content);
 			}
 		mSetSignupData.WriteData("PASS");
 		}

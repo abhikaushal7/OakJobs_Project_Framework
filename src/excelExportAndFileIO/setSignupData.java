@@ -13,7 +13,7 @@ import jxl.write.WriteException;
 public class setSignupData {
 	
 	 String oldFile= "D:\\A.K FOLDER\\Workspace\\OakJobs_Project_Framework\\Excel_File\\OakJobsDataSheet.xls";
-	 String resultFile = "D:\\A.K FOLDER\\Workspace\\OakJobs_Project_Framework\\Result_Excel_File\\LoginPage.xls";
+	 String resultFile = "D:\\A.K FOLDER\\Workspace\\OakJobs_Project_Framework\\Result_Excel_File\\SignUpPage.xls";
 
 	
 		// Method to only write  FAIL data to sheet for failed test cases
