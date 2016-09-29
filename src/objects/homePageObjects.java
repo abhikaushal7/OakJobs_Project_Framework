@@ -2,9 +2,9 @@ package objects;
 
 public class homePageObjects  {
 	
-	public  final String pageURL = "http://oakjobs.com/";
-	public  final String pageTitle = "Oak Job Alerts";
-	public  final String pageLogoPath	= "http://oakjobs.com/img/logo.png";
+	public  final String pageURL = "http://2ndchancejobalerts.com/";
+	public  final String pageTitle = "Search & Apply For Jobs | 2ndchancejobalerts";
+	public  final String pageLogoPath	= "http://2ndchancejobalerts.com/2ndchance_img/logo.png";
 	public  final String signinButton =	".//*[@id='bs-example-navbar-collapse-1']/ul/li[2]/a/button";
 	public  final String pageText1 =	".//*[@id='what']";
 	public  final String pageText2 =	".//*[@id='where']";

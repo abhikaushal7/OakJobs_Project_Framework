@@ -2,9 +2,9 @@ package objects;
 
 public class SignUpObjects {
 	
-	public  final String pageURL = "http://oakjobs.com/sign_up.php";
-	public  final String pageTitle = "Oak Job Alerts";
-	public  final String pageLogoPath	= "http://oakjobs.com/img/logo1.png";
+	public  final String pageURL = "http://2ndchancejobalerts.com/sign_up.php";
+	public  final String pageTitle = "2ndchancejobalerts";
+	public  final String pageLogoPath	= "http://2ndchancejobalerts.com/2ndchance_img/logo1.png";
 	
 	public  final String pageText1 =	".//*[@id='page-top']/section/div/h4";
 	public  final String pageText2 =	".//*[@id='page-top']/section/div/div/div[1]/form/div[1]/div[1]/label";

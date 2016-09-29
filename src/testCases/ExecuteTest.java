@@ -1,6 +1,7 @@
 package testCases;
 
 import org.testng.annotations.Test;
+
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -29,12 +30,16 @@ import jxl.Cell;
 import jxl.Sheet;
 import jxl.read.biff.BiffException;
 
+import readResults.*;
+import emailSend.*;
+
 public class ExecuteTest {
 	public WebDriver driver ;
 	setHomePageData mSetHomeData = new setHomePageData();
 	setLoginData mSetLoginData = new setLoginData();
 	setSignupData mSetSignupData = new setSignupData();
 	getExcelData file = new getExcelData();
+	
 	String HomeResultFile = "D:\\A.K FOLDER\\Workspace\\OakJobs_Project_Framework\\Result_Excel_File\\HomePage.xls";
 	String LoginResultFile = "D:\\A.K FOLDER\\Workspace\\OakJobs_Project_Framework\\Result_Excel_File\\Login.xls";
 	String SignupResultFile = "D:\\A.K FOLDER\\Workspace\\OakJobs_Project_Framework\\Result_Excel_File\\Signup.xls";
@@ -69,7 +74,7 @@ public void afterTest() {
 	int row = sheet.getRows();
     for (int i = 2; i <=row-1 ; i++) {
      //Loop over all the rows
-     Cell cell = sheet.getCell(2, i);
+     Cell cell = sheet.getCell(3, i);
      String content = cell.getContents().toString();
       
      //Print the new testcase name when it started
@@ -95,20 +100,20 @@ public void afterTest() {
 	
 	int row = sheet.getRows();
 	for(int i =2; i<=row-1; i++){
-		Cell cell = sheet.getCell(2, i);
+		Cell cell = sheet.getCell(3, i);
 		
 		String content = cell.getContents().toString();
 		System.out.println("New Testcase->"+content +" Started");
 		
 		// Call the function to perform the UIoperation
-		mOperationLogin.perform_homePage(content);
+		mOperationLogin.perform_Login(content);
 		}
 	mSetLoginData.WriteData("PASS");
 	}
 	
 	
 	// Verifies the SignUp Page Web-Elements
-		@Test(priority=1)
+		@Test(priority=2)
 		private void testSignUpPage() throws Exception {
 		UIOperation_Signup mOperationSignup = new UIOperation_Signup(driver);
 			
@@ -120,7 +125,7 @@ public void afterTest() {
 		
 		int row = sheet.getRows();
 		for(int i =2; i<=row-1; i++){
-			Cell cell = sheet.getCell(2, i);
+			Cell cell = sheet.getCell(3, i);
 			
 			String content = cell.getContents().toString();
 			System.out.println("New Testcase->"+content +" Started");
@@ -128,8 +133,15 @@ public void afterTest() {
 			// Call the function to perform the UIoperation
 		mOperationSignup.perform_Signup(content);
 			}
+	
 		mSetSignupData.WriteData("PASS");
+		
+	String html = Read_Results.results();
+	Email.SendEmail(html);
+		
+		
 		}
 	
+		
 	
 }

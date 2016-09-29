@@ -24,7 +24,7 @@ public class setSignupData {
 		WritableWorkbook copy = Workbook.createWorkbook(new File(resultFile), wb);
 		WritableSheet sheetToEdit = copy.getSheet(3);
 				
-					Label l = new Label(6, i, "FAIL");
+					Label l = new Label(7, i, "FAIL");
 				//	Label l = new Label(currentColumn, currentRow, value);
 					sheetToEdit.addCell(l);
 		
@@ -49,7 +49,7 @@ public class setSignupData {
 		int rows = sheetToEdit.getRows();
 	
 		for (int i=2; i<=rows-1; i++){
-					Label l = new Label(6, i, data);
+					Label l = new Label(7, i, data);
 				//	Label l = new Label(currentColumn, currentRow, value);
 					sheetToEdit.addCell(l);
 		}
@@ -72,7 +72,7 @@ public class setSignupData {
 		WritableWorkbook copy = Workbook.createWorkbook(new File(resultFile), wb);
 		WritableSheet sheetToEdit = copy.getSheet(3);
 				
-					Label l = new Label(6, i, "PASS");
+					Label l = new Label(7, i, "PASS");
 				//	Label l = new Label(currentColumn, currentRow, value);
 					sheetToEdit.addCell(l);
 		

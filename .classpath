@@ -8,5 +8,7 @@
 	<classpathentry kind="lib" path="lib/selenium-server-standalone-3.0.0-beta2.jar"/>
 	<classpathentry kind="lib" path="D:/A.K FOLDER/Jars/selenium-2.44.0/libs/testng-6.8.5.jar"/>
 	<classpathentry kind="lib" path="D:/A.K FOLDER/Jars/poi-ooxml-3.9.jar"/>
+	<classpathentry kind="lib" path="Z:/QA_Team/Java/activation.jar"/>
+	<classpathentry kind="lib" path="Z:/QA_Team/Java/mail.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -13,7 +13,6 @@ public class UIOperation_Signup {
     setSignupData msetData = new setSignupData();
     SignUpObjects mSignupObjects =  new SignUpObjects();
     AllMethods methods = new AllMethods(); 
-	String HomeResultFile = "D:\\A.K FOLDER\\Workspace\\OakJobs_Project_Framework\\Result_Excel_File\\HomePage.xls";
 
    
     public UIOperation_Signup(WebDriver driver){

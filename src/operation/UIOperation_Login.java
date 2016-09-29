@@ -21,7 +21,7 @@ public class UIOperation_Login {
     public UIOperation_Login(WebDriver driver){
         this.driver = driver;
     }
-    public void perform_homePage(String operationLogin) throws Exception{
+    public void perform_Login(String operationLogin) throws Exception{
     	
     	switch (operationLogin.toUpperCase()) {
 		
