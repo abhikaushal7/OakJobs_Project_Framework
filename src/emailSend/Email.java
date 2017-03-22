@@ -90,8 +90,8 @@ public class Email {
 
 	class SMTPAuthenticator extends javax.mail.Authenticator {
 		public PasswordAuthentication getPasswordAuthentication() {
-			String username = "abhikaushal07@gmail.com";
-			String password = "KAUSH@BHI007";
+			String username = "{YOUR_EMAIL}@gmail.com";
+			String password = "{YOUR_PASSWORD}";
 			return new PasswordAuthentication(username, password);
 		}
 	}
