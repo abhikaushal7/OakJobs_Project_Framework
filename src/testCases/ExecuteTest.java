@@ -111,7 +111,6 @@ public void afterTest() {
 	mSetLoginData.WriteData("PASS");
 	}
 	
-	
 	// Verifies the SignUp Page Web-Elements
 		@Test(priority=2)
 		private void testSignUpPage() throws Exception {
